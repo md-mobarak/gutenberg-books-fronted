@@ -1,0 +1,18 @@
+.book-details {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .book-details img {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .book-details h2 {
+    margin-bottom: 10px;
+  }
+  
+  .book-details p {
+    margin: 5px 0;
+  }
+  
