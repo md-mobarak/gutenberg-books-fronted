@@ -1,4 +1,4 @@
-.book-list {
+/* .book-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
@@ -34,4 +34,65 @@
   .book-card a:hover {
     background-color: #45a049;
   }
-  
+   */
+
+
+   /* Book List Container */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Adjusted for responsiveness */
+  gap: 25px; /* More spacing for better visuals */
+  margin-top: 20px;
+}
+
+/* Individual Book Card Styling */
+.book-card {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Softer shadow for a modern look */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.book-card img {
+  max-width: 100%;
+  height: 250px; /* Consistent height for images */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.book-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #333; /* Subtle dark text color */
+}
+
+.book-card p {
+  font-size: 14px;
+  color: #777;
+}
+
+.book-card a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.book-card a:hover {
+  background-color: #45a049;
+}
+
+.book-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}

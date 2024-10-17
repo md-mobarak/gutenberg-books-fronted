@@ -1,18 +1,78 @@
-.book-details {
-    padding: 20px;
-    text-align: center;
+/* BookPage.css */
+
+.book-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.book-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.book-cover {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.book-info {
+  text-align: center;
+}
+
+.book-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.book-author,
+.book-genres,
+.book-shelves {
+  margin-bottom: 5px;
+}
+
+.wishlist-button {
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.wishlist-button.added {
+  background-color: #4caf50;
+}
+
+.wishlist-button:disabled {
+  cursor: not-allowed;
+}
+
+.book-description {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .book-cover {
+    width: 150px;
   }
-  
-  .book-details img {
-    max-width: 200px;
-    margin-bottom: 20px;
+
+  .book-title {
+    font-size: 20px;
   }
-  
-  .book-details h2 {
-    margin-bottom: 10px;
+
+  .wishlist-button {
+    font-size: 14px;
+    padding: 8px 16px;
   }
-  
-  .book-details p {
-    margin: 5px 0;
-  }
-  
+}

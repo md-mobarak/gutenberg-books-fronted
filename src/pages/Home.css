@@ -1,4 +1,4 @@
-.home {
+/* .home {
     padding: 20px;
   }
   
@@ -33,4 +33,60 @@
       margin-bottom: 10px;
     }
   }
-  
+   */
+
+   /* Home Page Container */
+.home {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the content on larger screens */
+}
+
+/* Filters Styling */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Ensures responsive layout */
+}
+
+.search-bar {
+  padding: 12px;
+  width: 320px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.genre-dropdown {
+  padding: 12px;
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  /* Filters stack vertically on smaller devices */
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar, .genre-dropdown {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* More space between filters and book list */
+  .filters {
+    margin-bottom: 30px;
+  }
+
+  .book-list {
+    grid-template-columns: repeat(4, 1fr); /* 4 cards in a row for large devices */
+  }
+}

@@ -1,5 +1,7 @@
+
+
 import React from 'react';
-import { getWishlist } from '../utils/localStorageHelper';
+import { getWishlist } from '../utils/localStorageHelper'; // Ensure correct import
 import './WishlistPage.css';
 
 const WishlistPage = () => {
@@ -9,7 +11,7 @@ const WishlistPage = () => {
     <div className="wishlist">
       <h2>Your Wishlist</h2>
       <div className="wishlist-list">
-        {wishlist.length ? wishlist.map((book) => (
+        {wishlist?.length ? wishlist.map((book) => (
           <div key={book.id} className="wishlist-item">
             <img src={book.image} alt={book.title} />
             <p>{book.title}</p>
