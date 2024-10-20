@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import BookList from '../components/BookList';
 import Pagination from '../components/Pagination';
 import './Home.css';
+import Loaders from '../components/Loaders';
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -37,7 +38,9 @@ const Home = () => {
         </select>
       </div>
 
-      {loading ? <p>Loading...</p> : <BookList books={books} selectedGenre={selectedGenre} />}
+      {loading ? 
+        <Loaders></Loaders>
+     : <BookList books={books} selectedGenre={selectedGenre} />}
       <Pagination page={page} setPage={setPage} />
     </div>
   );

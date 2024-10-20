@@ -12,10 +12,14 @@ const WishlistPage = () => {
       <h2>Your Wishlist</h2>
       <div className="wishlist-list">
         {wishlist?.length ? wishlist.map((book) => (
+      
+          
           <div key={book.id} className="wishlist-item">
-            <img src={book.image} alt={book.title} />
+         <img src={book.formats['image/jpeg']} alt={book.title} />
             <p>{book.title}</p>
           </div>
+        
+          
         )) : <p>No books in wishlist.</p>}
       </div>
     </div>

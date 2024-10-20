@@ -1,5 +1,25 @@
 /* BookPage.css */
 
+
+
+/* .wishlist-button {
+  background-color: white;
+  color: green;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+} */
+
+.wishlist-button.added {
+  background-color: lightgray;
+  color: darkgray;
+  cursor: not-allowed;
+}
+
+
+
 .book-page {
   display: flex;
   flex-direction: column;

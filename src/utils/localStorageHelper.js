@@ -24,3 +24,8 @@ export const getWishlist = () => {
     localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
   };
   
+  export const isBookInWishlist = (bookId) => {
+    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    return wishlist.some(book => book.id === bookId);
+  };
+  

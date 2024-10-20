@@ -1,91 +1,122 @@
+/* Navbar.css */
+
+.logo-img{
+  height: 50px;
+  width: 50px;
+}
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #4CAF50;
-  padding: 10px 15px;
-  color: white;
-  position: relative;
-  z-index: 10;
+  padding: 10px 20px;
+  background-color: #45a049;
 }
 
-.logo {
-  font-size: 26px;
-  font-weight: bold;
+.navbar-logo h1 {
   color: white;
 }
 
-.nav-links {
-  list-style: none;
+.navbar-links {
   display: flex;
-  gap: 25px;
 }
 
-.nav-links a {
+.navbar-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links a {
   color: white;
   text-decoration: none;
   font-size: 18px;
-  transition: color 0.3s;
+  transition: font-weight 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #ddd;
+.navbar-links a:hover {
+  font-weight: bold;
 }
 
-/* Burger Icon */
-.burger {
+.navbar-auth {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-auth button {
+  background-color: white;
+  color: #45a049;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-auth button:hover {
+  background-color: lightgray;
+}
+
+.hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
 }
 
-.burger div {
+.hamburger span {
   width: 25px;
   height: 3px;
   background-color: white;
-  margin: 5px;
-  transition: 0.4s;
+  margin: 4px 0;
+  transition: 0.3s;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-  .nav-links {
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .navbar-links {
     display: none;
     flex-direction: column;
-    background-color: #4CAF50;
     position: absolute;
     top: 60px;
-    right: 20px;
-    width: 200px;
+    right: 0;
+    background-color: #45a049;
+    width: 100%;
     text-align: center;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
   }
 
-  .nav-links a {
-    padding: 10px 0;
-    font-size: 20px;
-  }
-
-  .burger {
+  .navbar-links.open {
     display: flex;
   }
 
-  .burger.active .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+  .navbar-links ul {
+    flex-direction: column;
   }
 
-  .burger.active .line2 {
+  .navbar-links li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+  }
+
+  .hamburger.open span:nth-child(2) {
     opacity: 0;
   }
 
-  .burger.active .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-
-  .nav-links.active {
-    display: flex;
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
   }
 }
