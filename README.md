@@ -25,11 +25,11 @@ This project is an excellent demonstration of full-stack web development skills,
 
 ## Demo
 
-[Live Demo](https://your-github-username.github.io/your-repo-name)
+[Live Demo](https://gutenberg-books-fronted.vercel.app/)
 
 ## Screenshots
 
-![Book Wishlist Screenshot](./assets/screenshot.png)
+![Book Wishlist Screenshot](https://i.ibb.co.com/g7xXVKc/screencapture-gutenberg-books-fronted-vercel-app-2024-10-20-21-32-51.png)
 
 ## Installation
 
@@ -37,7 +37,7 @@ To run the project locally, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-github-username/your-repo-name.git
+    git clone https://github.com/md-mobarak/gutenberg-books-fronted
     ```
 
 2. Navigate to the project directory:
